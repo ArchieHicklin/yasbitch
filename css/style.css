@@ -1,19 +1,52 @@
-* { margin: 0; padding: 0; }
+* { margin: 0; padding: 0; text-decoration: none; font-family: Harbour-Light;}
 body {
   overflow: hidden;
   position: relative;
   text-decoration: none !important;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color-dodge;
+}
+
+@media (max-width: 800px) {
+  img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: color-dodge;
+  }
+}
+
+@font-face {
+	font-family: 'Harbour-Light';
+	src: url('fonts/HarbourLight.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .what {
   background: transparent;
   position: absolute;
   text-align: center;
-  margin-top: 20%;
-  margin-left: 20%;
-  font-size: 48px;
+  margin-top: 0%;
+  margin-left: 0%;
+  font-size: 62px;
   color: #FFFFFF;
-  font-family: akkurat-bold;
+  font-family: Harbour-Light;
+}
+
+.oh {
+  background: transparent;
+  position: absolute;
+  text-align: center;
+  margin-top: 13% !important;
+  margin-left: 20%;
+  font-size: 62px;
+  color: #FFFFFF;
+  font-family: Harbour-Light;
+  z-index: 100;
 }
 
 @keyframes noise-anim {
@@ -178,7 +211,7 @@ body {
   text-shadow: -3px 0 #FF9696;
   top: 0;
   color: #FF9696;
-  background: #0000FF;
+  background: #FF0000;
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 2s infinite linear alternate-reverse;
@@ -306,7 +339,7 @@ body {
   padding: 15px 25px;
   font-size: 22px;
   text-decoration: none !important;
-  font-family: akkurat-bold;
+  font-family: Harbour-Light;
   margin: 20px;
   color: #fff;
 }
@@ -324,4 +357,52 @@ body {
   margin-left: 20%;
   box-shadow: 0px 5px 0px 0px #0000FF;
   text-decoration: none !important;
+}
+
+.svg{
+  width:100%;
+  height:50%;
+  text-align:center;
+  margin-top:5em;
+}
+svg{
+  max-width:100%;
+}
+
+.hills {
+  position: fixed !important;
+  opacity: 0.2;
+  mix-blend-mode: lighten;
+  animation-name: fade-bg;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+  width: 100%;
+  height: 75%;
+}
+
+@keyframes fade-bg {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    51% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
